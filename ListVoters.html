@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style=" background: linear-gradient(to right, #5433ff, #20bdff, #a5fecb);">
+    <div class = "navbar">
+        <a href="/index.html">Vote</a>
+        <a href="/ListVoters.html">List Voters</a>
+    </div>
+
+    <div>
+        <button onclick="connectMetamask()">Connect Metamask</button>
+        <p id="metamasknotification"></p>
+    </div>
+
+    <div class="container">
+        <form method="POST" action="/vote" enctype="multipart/form-data">
+            <span>
+                Add Candidate Here
+            </span>
+            <input type = "text" name ="vote" placeholder="Add name of candidate ... ">
+            <input type="submit" value = "Add Candidate">
+        </form>
+    </div>
+
+    <div>
+        <p id= "votingStatus"></p>
+    </div>
+
+    <div>
+        <button onclick="getAllCandidates()">List All Candidates</button>
+        <p id="p3"></p>
+    </div>
+
+    <div>
+        <table id="myTable">
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Candidate name</th>
+                    <th>Candidate votes</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
